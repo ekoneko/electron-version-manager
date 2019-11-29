@@ -1,0 +1,38 @@
+{
+  "name": "@ekoneko/evm",
+  "version": "1.0.0",
+  "description": "electron version manager",
+  "main": "lib/index.js",
+  "bin": {
+    "evm": "./npm/cli.js"
+  },
+  "scripts": {
+    "install": "node ./npm/install",
+    "build": "tsc",
+    "release": "np --no-tests",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib",
+    "npm"
+  ],
+  "author": "ekoneko <arzusyume@gmail.com>",
+  "repository": {
+    "url": "https://github.com/ekoneko/electron-version-manager",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/extract-zip": "^1.6.2",
+    "@types/node": "^12.12.14",
+    "np": "^5.1.3",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@electron/get": "^1.7.1",
+    "extract-zip": "^1.6.7"
+  }
+}
