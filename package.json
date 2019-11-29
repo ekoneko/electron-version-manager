@@ -7,9 +7,9 @@
     "evm": "./npm/cli.js"
   },
   "scripts": {
-    "install": "node ./npm/install",
+    "install": "node ./npm/install.js",
     "build": "tsc",
-    "release": "np --no-tests",
+    "release": "BUILD_EVM=1 np --no-tests --no-yarn",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
