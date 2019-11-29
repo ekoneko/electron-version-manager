@@ -16,7 +16,10 @@ export function getEvmHome() {
   }
 }
 
-export function getElectronDownloadConfig(): ElectronPlatformArtifactDetailsWithDefaults {
+export function getElectronDownloadConfig(): {
+  version: string;
+  mirror?: string;
+} {
   // TODO: get rootPath from __dirname is not a good idea
   const rootPath = __dirname
     .split("/node_modules/")

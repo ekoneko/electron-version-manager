@@ -29,9 +29,17 @@ if (versions.includes(config.version)) {
   process.exit(0);
 }
 
+const mirrorOptions = config.mirror
+  ? {
+      mirror: config.mirror,
+      customDir: config.version
+    }
+  : undefined;
+
 downloadArtifact({
   artifactName: "electron",
-  ...config
+  version: config.version,
+  mirrorOptions: mirrorOptions
 })
   .then(zipPath => extractFile(zipPath, path.join(evmHome, config.version)))
   .catch(err => {
