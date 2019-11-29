@@ -7,15 +7,10 @@ Use global electron binary file for multiple repositories.
 1. Before add @ekoneko/evm, ensure your package.json has property `build.electronDownload`.
 
 ```
-{
-  "build": {
-    "electronDownload": {
-      "version": "7.1.2",
-      "mirrorOptions": {
-        "mirror": "https://npm.taobao.org/mirrors/electron/",
-        "customDir": "7.1.2"
-      }
-    }
+"build": {
+  "electronDownload": {
+    "version": "7.1.2",
+    "mirror": "https://npm.taobao.org/mirrors/electron/"
   }
 }
 ```
@@ -44,6 +39,6 @@ ELECTRON_SKIP_BINARY_DOWNLOAD=1 npm install -D electron
 
 ## Configure
 
-### process.env.ELECTRON\_VERSION\_MANAGER\_PATH
+### process.env.ELECTRON_VERSION_MANAGER_PATH
 
 Set a path to install electron binary file, default path is `~/.evm`.
