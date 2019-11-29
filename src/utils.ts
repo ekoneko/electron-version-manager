@@ -17,7 +17,11 @@ export function getEvmHome() {
 }
 
 export function getElectronDownloadConfig(): ElectronPlatformArtifactDetailsWithDefaults {
-  const rootPath = path.join(process.cwd(), "..", "..");
+  // TODO: get rootPath from __dirname is not a good idea
+  const rootPath = __dirname
+    .split("/node_modules/")
+    .slice(0, -1)
+    .join("/node_modules/");
   if (!rootPath) {
     throw new Error("get project path failed");
   }
