@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import os from "os";
-import { ElectronPlatformArtifactDetailsWithDefaults } from "@electron/get/dist/cjs/types";
 
 export function getEvmHome() {
   const homePath = os.homedir();
@@ -22,9 +21,9 @@ export function getElectronDownloadConfig(): {
 } {
   // TODO: get rootPath from __dirname is not a good idea
   const rootPath = __dirname
-    .split("/node_modules/")
+    .split(`${path.sep}node_modules${path.sep}`)
     .slice(0, -1)
-    .join("/node_modules/");
+    .join(`${path.sep}node_modules${path.sep}`);
   if (!rootPath) {
     throw new Error("get project path failed");
   }
