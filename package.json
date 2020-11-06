@@ -1,6 +1,6 @@
 {
   "name": "@ekoneko/evm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "electron version manager",
   "main": "lib/index.js",
   "bin": {
