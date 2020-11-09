@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
-const path = require('path')
-const cliPath = path.resolve('../lib/install.js')
+const cliPath = require.resolve('../lib/install.js')
 if (process.env.BUILD_EVM) {
   process.exit(0);
 }
